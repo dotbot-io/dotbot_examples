@@ -130,6 +130,11 @@ include_directories(
 # add_dependencies(dotbot_examples ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
+add_executable(refee src/refee.cpp)
+add_dependencies(refee ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(refee ${catkin_LIBRARIES})
+
+
 add_executable(robot_info_srv_example src/robot_info_srv_example.cpp)
 add_dependencies(robot_info_srv_example ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(robot_info_srv_example ${catkin_LIBRARIES})
