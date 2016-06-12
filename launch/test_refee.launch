@@ -1,0 +1,16 @@
+<launch>
+  <group ns="silver">
+    <node pkg="dotbot_examples" type="simple" name="simple" output="screen">
+      <param name="other" value="white"/>
+    </node>
+  </group>
+
+  <group ns="white">
+    <node pkg="dotbot_examples" type="simple" name="simple" output="screen">
+      <param name="other" value="silver"/>
+    </node>
+  </group>
+
+  <node pkg="dotbot_examples" type="refee" name="refee" output="screen"/>
+
+</launch>
